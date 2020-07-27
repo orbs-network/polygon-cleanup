@@ -1,0 +1,26 @@
+{
+  "name": "polygon-cleanup",
+  "version": "1.0.0",
+  "description": "Set of scripts to clean up annoying resources which terraform fails to clean between polygon runs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbs-network/polygon-cleanup.git"
+  },
+  "keywords": [
+    "polygon",
+    "orbs",
+    "hybrid",
+    "blockchain",
+    "blockchain"
+  ],
+  "author": "Itamar Arjuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orbs-network/polygon-cleanup/issues"
+  },
+  "homepage": "https://github.com/orbs-network/polygon-cleanup#readme"
+}
