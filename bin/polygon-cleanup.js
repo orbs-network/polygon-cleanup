@@ -57,4 +57,19 @@ program
         await efsService.clean({ region, awsProfile: profile, query });
     });
 
+program
+    .command('all --region --profile --query --auto-approve')
+    .description('run a complete cleanup for the specified region/awsProfile')
+    .option('--region <region>', 'The AWS region to perform the action on')
+    .option('--profile <profileName>', 'The AWS profile to use')
+    .option("-q, --query [string]", "Incase you want to delete a keypair matching a specific search term")
+    .option('--auto-approve', 'If flag is present, no human interaction is required')
+    .action(async function ({ region, profile, query = '', autoApprove = false }) {
+        await secretsService.clean({ region, awsProfile: profile, query, autoApprove });
+        await instanceProfilesService.clean({ region, awsProfile: profile, query, autoApprove });
+        await iamRolesService.clean({ region, awsProfile: profile, query, autoApprove });
+        await keyPairService.clean({ region, awsProfile: profile, query, autoApprove });
+        await efsService.clean({ region, awsProfile: profile, query, autoApprove });
+    });
+
 program.parse(process.argv);
