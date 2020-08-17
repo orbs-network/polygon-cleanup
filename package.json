@@ -1,5 +1,5 @@
 {
-  "name": "polygon-cleanup",
+  "name": "@orbs-network/polygon-cleanup",
   "version": "1.0.0",
   "description": "Set of scripts to clean up annoying resources which terraform fails to clean between polygon runs",
   "main": "index.js",
